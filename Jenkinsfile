@@ -4,7 +4,7 @@ pipeline{
   agent {
      label "myagent"
 }
-environment {
+env {
 BRANCH_NAME "master"
 }
 
