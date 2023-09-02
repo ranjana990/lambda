@@ -2,10 +2,6 @@
 
 pipeline{
   agent any
-env {
-BRANCH_NAME "master"
-}
-
 
   stages {
      stage ('Build')
