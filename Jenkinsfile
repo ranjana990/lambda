@@ -7,6 +7,7 @@ pipeline{
      stage ('Build')
 {
   steps {
+ sh "sudo service docker start"
  sh "sudo docker build . -t lambda"
  sh "sudo docker tag lambda:latest 465781362998.dkr.ecr.us-east-1.amazonaws.com/lambda:latest"
 }
