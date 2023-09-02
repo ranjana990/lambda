@@ -1,7 +1,13 @@
+
+
 pipeline{
   agent {
      label "myagent"
 }
+environment {
+BRANCH_NAME "master"
+}
+
 
   stages {
      stage ('Build')
