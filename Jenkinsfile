@@ -2,7 +2,7 @@ pipeline{
   agent any
   parameters {
    string ACCOUNT_ID: '465781362998',
-   string region: 'us-east-1',
+   string region: 'us-east-1'
   }
 
   stages {
