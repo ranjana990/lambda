@@ -1,5 +1,10 @@
 pipeline{
-  agent any
+  agent {
+    docker {
+       image 'ubuntu:20.04'
+    }
+
+  }
   parameters {
     string(name: 'ACCOUNT_ID', defaultValue: '465781362998', description: 'account id')
     string(name: 'region', defaultValue: 'us-east-1', description: 'region')
