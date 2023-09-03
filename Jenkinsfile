@@ -9,9 +9,9 @@ pipeline{
      stage ('Build')
 {
   steps {
- sh " service docker start"
- sh " docker build . -t lambda"
- sh " docker tag lambda:latest $ACCOUNT_ID.dkr.ecr.$region.amazonaws.com/lambda:latest"
+ sh " sudo service docker start"
+ sh " sudo docker build . -t lambda"
+ sh "sudo docker tag lambda:latest $ACCOUNT_ID.dkr.ecr.$region.amazonaws.com/lambda:latest"
 }
 }
 
