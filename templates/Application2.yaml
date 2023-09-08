@@ -3,6 +3,9 @@ source:
   repoURL: 'https://github.com/ranjana990/lambda2.git'
   path: .
   targetRevision: HEAD
+helm:
+   version: 3
+   values: 
 destination:
   server: 'https://kubernetes.default.svc'
   namespace: default
