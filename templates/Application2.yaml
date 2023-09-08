@@ -1,4 +1,5 @@
 project: default
+kind: Application
 source:
   repoURL: 'https://github.com/ranjana990/lambda2.git'
   path: .
