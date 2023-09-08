@@ -2,18 +2,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: 'booking'
-project: ''
 spec:
- source:
-  repoURL: 'https://github.com/ranjana990/lambda2.git'
-  path: .
-  targetRevision: HEAD
- helm:
-   version: 3
-   values: 
- destination:
-  server: 'https://kubernetes.default.svc'
-  namespace: default
-  name: ''
-syncPolicy:
-  automated: {}
+  destination:
+    name: ''
+    namespace: default
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: .
+    repoURL: 'https://github.com/ranjana990/lambda2.git'
+    targetRevision: HEAD
+  sources: []
+  project: default
