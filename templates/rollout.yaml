@@ -15,10 +15,16 @@ spec:
       app: {{ template "helm-guestbook.name" . }}
       release: {{ .Release.Name }}
   strategy:
-    blueGreen:
-      activeService: {{ template "helm-guestbook.fullname" . }}
-      previewService: {{ template "helm-guestbook.fullname" . }}-preview
-      autoPromotionEnabled: false
+    canary:
+      canary: #Indicates that the rollout should use the Canary strategy
+      maxSurge: "50%"
+      maxUnavailable: 0
+      steps:
+      - setWeight: 50
+      - pause:
+          duration: 2m
+      - setWeight: 50
+      - pause: {} # pause indefinitely
   template:
     metadata:
       labels:
