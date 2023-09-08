@@ -22,7 +22,7 @@ spec:
       steps:
       - setWeight: 50
       - pause:
-          duration: 2m
+          duration: 60s
       - setWeight: 50
       - pause: {} # pause indefinitely
   template:
